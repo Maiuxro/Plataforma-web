@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./styles.css"/>
+    <link rel="icon" type="image/x-icon" href="../assets/icon/main.ico">
+    <title>Lista de Usuarios</title>
+</head>
+<body class="container p-5">
+
+    <div class="container p-5" id="mainBlock">
+        <div class="row" id="titleBlock">
+            <div class="col">
+                <h1 class="text-center">Lista de Usuarios</h1>
+            </div>
+        </div>
+        <div class="row pt-3" id="listBlock">
+            <table class="table table-striped table-hover" id="listTable">
+                <thead id="listTableHeader">
+                    <tr>
+                        <th class="col-3">Nombre</th>
+                        <th class="col-4">Email</th>
+                        <th class="col-2 text-center">Código</th>
+                        <th class="col-2 text-center">Fecha de Creación</th>
+                    </tr>
+                </thead>
+                <tbody id="listTableBody">
+                </tbody>
+                <tbody id="noDataTableBody" hidden>
+                    <td class="h2 text-center" colspan="100%">No se encontraron usuarios</td>
+                </tbody>
+            </table>
+        </div>
+        <div class="row justify-content-end pt-3" id="buttonBlock">
+            <div class="col-2" id="newUserButtonBlock">
+                <a class="w-100 btn btn-primary orangeButton" href="/new_user" target="_blank">Crear Usuario</a>
+            </div>
+            <div class="col-2" id="exportButtonBlock">
+                <a class="w-100 btn btn-primary orangeButton" href="/api/list_user/export" target="_blank">Exportar</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="./logic.js"></script>
+</body>
+</html>
